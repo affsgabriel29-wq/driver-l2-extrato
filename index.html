@@ -182,27 +182,31 @@
   <header class="hero">
     <p class="eyebrow">Registro de serviço · Ano 2026</p>
     <h1 class="title">Driver — Extrato de Pagamentos</h1>
-    <p class="subtitle">Trabalho do <b>Gregin</b> (R$200/semana) e contrato à parte com <b>Kamusari</b> (R$100 a cada 15 dias, pago adiantado).</p>
+    <p class="subtitle">Desde 22/09/2026 o trabalho é dividido entre <b>Gregin</b> e <b>Coltão</b> (R$200/semana, R$100 de cada). A dívida antiga do Gregin está congelada. Contrato à parte com <b>Kamusari</b> (R$100 a cada 15 dias, pago adiantado).</p>
     <span class="readonly-tag">Documento de referência · somente leitura</span>
   </header>
 
   <section class="cards" id="summaryCards" style="margin-top:28px;"></section>
 
-  <h2 class="section-title first">Legenda — Gregin</h2>
+  <h2 class="section-title first">Legenda</h2>
   <div class="panel">
     <div class="legend" id="legendGY"></div>
   </div>
 
-  <h2 class="section-title">Calendário — Gregin</h2>
-  <div class="month-expanded" id="monthExpandedGY"></div>
+  <h2 class="section-title">Calendário — Gregin (conta nova, desde 22/09)</h2>
+  <div class="month-expanded" id="monthExpandedG2"></div>
 
-  <h2 class="section-title">Legenda — Kamusari</h2>
-  <div class="panel">
-    <div class="legend" id="legendKam"></div>
-  </div>
+  <h2 class="section-title">Calendário — Coltão (desde 22/09)</h2>
+  <div class="month-expanded" id="monthExpandedCol"></div>
 
   <h2 class="section-title">Calendário — Kamusari</h2>
   <div class="month-expanded" id="monthExpandedKam"></div>
+
+  <h2 class="section-title">Calendário — Gregin (conta antiga, histórico)</h2>
+  <div class="panel" style="margin-bottom:14px;">
+    <p class="subtitle" style="margin:0;max-width:none;">Conta antiga, até 21/09/2026. Não entra mais em nenhum cálculo: o que estava em aberto foi fechado em R$1.200,00 (card "Gregin — dívida antiga").</p>
+  </div>
+  <div class="month-expanded" id="monthExpandedGY"></div>
 
   <footer id="generatedAt"></footer>
 
@@ -255,7 +259,13 @@
   /* ---------------- dados fixos deste extrato (exportado do dashboard interativo em 15/09/2026) ---------------- */
   var calendarGY = {"2026-03-27":"green","2026-03-28":"green","2026-03-29":"green","2026-03-30":"green","2026-03-31":"green","2026-04-01":"green","2026-04-02":"green","2026-04-03":"green","2026-04-04":"green","2026-04-05":"green","2026-04-06":"green","2026-04-07":"green","2026-04-08":"green","2026-04-09":"green","2026-04-10":"green","2026-04-11":"green","2026-04-12":"green","2026-04-13":"green","2026-04-14":"green","2026-04-15":"green","2026-04-16":"green","2026-04-17":"green","2026-04-18":"green","2026-04-19":"green","2026-04-20":"green","2026-04-21":"green","2026-04-22":"green","2026-04-23":"green","2026-04-24":"green","2026-04-25":"green","2026-04-26":"green","2026-04-27":"green","2026-04-28":"green","2026-04-29":"green","2026-04-30":"green","2026-05-01":"green","2026-05-02":"green","2026-05-03":"green","2026-05-04":"green","2026-05-05":"green","2026-05-06":"green","2026-05-07":"green","2026-05-08":"green","2026-05-09":"green","2026-05-10":"green","2026-05-11":"green","2026-05-12":"green","2026-05-13":"green","2026-05-14":"green","2026-05-15":"green","2026-05-16":"green","2026-05-17":"green","2026-05-18":"green","2026-05-19":"green","2026-05-20":"green","2026-05-21":"green","2026-05-22":"green","2026-05-23":"green","2026-05-24":"green","2026-05-25":"green","2026-05-26":"green","2026-05-27":"green","2026-05-28":"green","2026-05-29":"green","2026-05-30":"green","2026-05-31":"green","2026-06-01":"green","2026-06-02":"green","2026-06-03":"green","2026-06-04":"green","2026-06-05":"green","2026-06-06":"green","2026-06-07":"green","2026-06-08":"green","2026-06-09":"green","2026-06-10":"green","2026-06-11":"green","2026-06-12":"green","2026-06-13":"green","2026-06-14":"green","2026-06-15":"green","2026-06-16":"green","2026-06-17":"green","2026-06-18":"green","2026-06-19":"green","2026-06-20":"green","2026-06-21":"green","2026-06-22":"green","2026-06-23":"green","2026-06-24":"green","2026-06-27":"green","2026-06-28":"green","2026-06-29":"green","2026-06-30":"green","2026-07-01":"green","2026-07-02":"green","2026-07-03":"green","2026-07-04":"green","2026-07-05":"green","2026-07-06":"green","2026-07-07":"green","2026-07-08":"green","2026-07-09":"green","2026-07-10":"green","2026-07-11":"green","2026-07-12":"green","2026-07-13":"green","2026-07-14":"green","2026-07-15":"green","2026-07-16":"green","2026-07-17":"green","2026-07-18":"green","2026-07-20":"green","2026-07-19":"green","2026-07-21":"green","2026-06-26":"green","2026-06-25":"green","2026-07-22":"green","2026-07-23":"green","2026-07-24":"green","2026-07-25":"green","2026-07-26":"green","2026-07-27":"green","2026-07-28":"green","2026-07-29":"green","2026-07-30":"green","2026-07-31":"green","2026-08-01":"green","2026-08-02":"green","2026-08-03":"green","2026-08-04":"yellow","2026-08-05":"yellow","2026-08-06":"yellow","2026-08-07":"yellow","2026-08-08":"yellow","2026-08-10":"yellow","2026-08-09":"yellow","2026-08-11":"yellow","2026-08-12":"yellow","2026-08-13":"yellow","2026-08-14":"yellow","2026-08-15":"yellow","2026-08-16":"yellow","2026-08-17":"yellow","2026-08-18":"yellow","2026-08-19":"yellow","2026-08-20":"yellow","2026-08-21":"yellow","2026-08-22":"yellow","2026-08-23":"yellow","2026-08-24":"yellow","2026-08-25":"yellow","2026-08-26":"yellow","2026-08-27":"yellow","2026-08-28":"yellow","2026-08-29":"yellow","2026-08-30":"yellow","2026-08-31":"yellow","2026-09-01":"yellow","2026-09-02":"yellow","2026-09-03":"yellow","2026-09-04":"yellow","2026-09-05":"yellow","2026-09-06":"yellow","2026-09-07":"yellow","2026-09-08":"yellow","2026-09-09":"yellow","2026-09-10":"yellow","2026-09-11":"yellow","2026-09-12":"yellow","2026-09-13":"yellow","2026-09-14":"yellow","2026-09-15":"yellow"};
 
-  var calendarKam = {"2026-06-30":"green","2026-07-01":"green","2026-07-02":"green","2026-07-06":"green","2026-07-08":"green","2026-07-09":"green","2026-07-13":"green","2026-07-14":"green","2026-07-15":"green","2026-07-20":"green","2026-07-22":"green","2026-07-23":"green","2026-07-27":"green","2026-07-29":"green","2026-07-30":"green","2026-08-03":"green","2026-08-05":"green","2026-08-06":"green","2026-08-10":"green","2026-08-12":"green","2026-08-13":"green","2026-08-17":"green","2026-08-19":"green","2026-08-20":"green","2026-08-24":"green","2026-08-26":"green","2026-08-27":"green","2026-08-31":"green","2026-09-02":"green","2026-09-03":"green","2026-09-07":"green","2026-09-09":"green","2026-09-10":"green"};
+  var calendarGregin2 = {"2026-09-22":"yellow"};
+
+  var calendarColtao = {"2026-09-22":"yellow"};
+
+  var dividaAntigaGregin = 1200;
+
+  var calendarKam = {"2026-06-30":"green","2026-07-01":"green","2026-07-02":"green","2026-07-06":"green","2026-07-08":"green","2026-07-09":"green","2026-07-13":"green","2026-07-14":"green","2026-07-15":"green","2026-07-20":"green","2026-07-22":"green","2026-07-23":"green","2026-07-27":"green","2026-07-29":"green","2026-07-30":"green","2026-08-03":"green","2026-08-05":"green","2026-08-06":"green","2026-08-10":"green","2026-08-12":"green","2026-08-13":"green","2026-08-17":"green","2026-08-19":"green","2026-08-20":"green","2026-08-24":"green","2026-08-26":"green","2026-08-27":"green","2026-08-31":"green","2026-09-02":"green","2026-09-03":"green","2026-09-07":"green","2026-09-09":"green","2026-09-10":"green","2026-09-14":"yellow","2026-09-16":"yellow","2026-09-17":"yellow","2026-09-21":"yellow","2026-09-23":"yellow"};
 
   /* ---------------- legendas ---------------- */
   function renderLegend(elId, order) {
@@ -265,7 +275,6 @@
     }).join("");
   }
   renderLegend("legendGY", STATUS_ORDER_GY);
-  renderLegend("legendKam", STATUS_ORDER_KAM);
 
   /* ---------------- calendário: seletor de mês + mês expandido (somente leitura) ---------------- */
   function statusStyle(status) {
@@ -370,21 +379,20 @@
     renderExpanded();
   }
 
+  makeReadOnlyCalendar(calendarGregin2, "monthExpandedG2");
+  makeReadOnlyCalendar(calendarColtao, "monthExpandedCol");
   makeReadOnlyCalendar(calendarGY, "monthExpandedGY");
   makeReadOnlyCalendar(calendarKam, "monthExpandedKam");
 
   /* ---------------- resumo ---------------- */
-  var rate = 200 / 7; // R$200/semana — valor cheio, não é mais dividido com ninguém
-  var greginDiasTotal = 0;
-  var greginDevido = 0;
-
-  for (var k in calendarGY) {
-    var status = calendarGY[k];
-    if (status && status !== "green") {
-      greginDiasTotal++;
-      greginDevido += rate;
-    }
+  var RATE_DIVIDIDO = 100 / 7; // desde 22/09/2026: R$200/semana dividido entre Gregin e Coltão
+  function contaDias(cal) {
+    var dias = 0;
+    for (var k in cal) if (cal[k] && cal[k] !== "green") dias++;
+    return { dias: dias, devido: dias * RATE_DIVIDIDO };
   }
+  var g2 = contaDias(calendarGregin2);
+  var col = contaDias(calendarColtao);
 
   var today = todayIso();
 
@@ -400,8 +408,12 @@
   var kamDevido = kamQtdAberto * 100;
 
   document.getElementById("summaryCards").innerHTML =
-    '<div class="panel card"><p class="who">Gregin deve</p><p class="amount">' + fmtMoney(greginDevido) + '</p>' +
-    '<p class="detail">' + greginDiasTotal + ' dia(s) não pago(s) &middot; R$28,57/dia</p></div>' +
+    '<div class="panel card"><p class="who">Gregin — conta nova</p><p class="amount">' + fmtMoney(g2.devido) + '</p>' +
+    '<p class="detail">' + g2.dias + ' dia(s) não pago(s) desde 22/09 &middot; R$14,29/dia</p></div>' +
+    '<div class="panel card"><p class="who">Coltão deve</p><p class="amount">' + fmtMoney(col.devido) + '</p>' +
+    '<p class="detail">' + col.dias + ' dia(s) não pago(s) desde 22/09 &middot; R$14,29/dia</p></div>' +
+    '<div class="panel card"><p class="who">Gregin — dívida antiga</p><p class="amount">' + fmtMoney(dividaAntigaGregin) + '</p>' +
+    '<p class="detail">Congelada em R$1.200,00 em 22/09/2026 &middot; não cresce mais</p></div>' +
     '<div class="panel card"><p class="who">Kamusari deve</p><p class="amount">' + fmtMoney(kamDevido) + '</p>' +
     '<p class="detail">' + kamQtdAberto + ' período(s) de 15 dias em aberto &middot; R$100/período</p></div>';
 
