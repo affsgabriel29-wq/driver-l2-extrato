@@ -182,7 +182,7 @@
   <header class="hero">
     <p class="eyebrow">Registro de serviço · Ano 2026</p>
     <h1 class="title">Driver — Extrato de Pagamentos</h1>
-    <p class="subtitle">Desde 22/09/2026 o trabalho é dividido entre <b>Gregin</b> e <b>Coltão</b> (R$200/semana, R$100 de cada). A dívida antiga do Gregin está congelada. Contrato à parte com <b>Kamusari</b> (R$100 a cada 15 dias, pago adiantado).</p>
+    <p class="subtitle">Desde 22/09/2026 o trabalho é dividido entre <b>Gregin</b> e <b>Coltão</b> (R$200/semana, R$100 de cada). A dívida antiga do Gregin está congelada.</p>
     <span class="readonly-tag">Documento de referência · somente leitura</span>
   </header>
 
@@ -199,8 +199,6 @@
   <h2 class="section-title">Calendário — Coltão (desde 22/09)</h2>
   <div class="month-expanded" id="monthExpandedCol"></div>
 
-  <h2 class="section-title">Calendário — Kamusari</h2>
-  <div class="month-expanded" id="monthExpandedKam"></div>
 
   <h2 class="section-title">Calendário — Gregin (conta antiga, histórico)</h2>
   <div class="panel" style="margin-bottom:14px;">
@@ -226,7 +224,6 @@
     yellow:  { bg: "var(--c-yellow-bg)",  fg: "var(--c-yellow-fg)",  label: "Amarelo — não pago" }
   };
   var STATUS_ORDER_GY = ["green","yellow"];
-  var STATUS_ORDER_KAM = ["green","yellow"];
 
   function pad2(n) { return n < 10 ? "0" + n : "" + n; }
   function iso(y, m, d) { return y + "-" + pad2(m + 1) + "-" + pad2(d); }
@@ -265,7 +262,6 @@
 
   var dividaAntigaGregin = 1200;
 
-  var calendarKam = {"2026-06-30":"green","2026-07-01":"green","2026-07-02":"green","2026-07-06":"green","2026-07-08":"green","2026-07-09":"green","2026-07-13":"green","2026-07-14":"green","2026-07-15":"green","2026-07-20":"green","2026-07-22":"green","2026-07-23":"green","2026-07-27":"green","2026-07-29":"green","2026-07-30":"green","2026-08-03":"green","2026-08-05":"green","2026-08-06":"green","2026-08-10":"green","2026-08-12":"green","2026-08-13":"green","2026-08-17":"green","2026-08-19":"green","2026-08-20":"green","2026-08-24":"green","2026-08-26":"green","2026-08-27":"green","2026-08-31":"green","2026-09-02":"green","2026-09-03":"green","2026-09-07":"green","2026-09-09":"green","2026-09-10":"green","2026-09-14":"green","2026-09-16":"green","2026-09-17":"green","2026-09-21":"green","2026-09-23":"green","2026-09-24":"green","2026-09-28":"green","2026-09-30":"green","2026-10-01":"green","2026-10-05":"yellow","2026-10-07":"yellow","2026-10-08":"yellow"};
 
   /* ---------------- legendas ---------------- */
   function renderLegend(elId, order) {
@@ -382,7 +378,6 @@
   makeReadOnlyCalendar(calendarGregin2, "monthExpandedG2");
   makeReadOnlyCalendar(calendarColtao, "monthExpandedCol");
   makeReadOnlyCalendar(calendarGY, "monthExpandedGY");
-  makeReadOnlyCalendar(calendarKam, "monthExpandedKam");
 
   /* ---------------- resumo ---------------- */
   var RATE_DIVIDIDO = 100 / 7; // desde 22/09/2026: R$200/semana dividido entre Gregin e Coltão
@@ -396,26 +391,13 @@
 
   var today = todayIso();
 
-  var KAM_START = "2026-06-30";
-  var kamJanelasAberto = {};
-  for (var k2 in calendarKam) {
-    if (calendarKam[k2] && calendarKam[k2] !== "green") {
-      var w = Math.floor(daysBetween(KAM_START, k2) / 15);
-      kamJanelasAberto[w] = true;
-    }
-  }
-  var kamQtdAberto = Object.keys(kamJanelasAberto).length;
-  var kamDevido = kamQtdAberto * 100;
-
   document.getElementById("summaryCards").innerHTML =
     '<div class="panel card"><p class="who">Gregin — conta nova</p><p class="amount">' + fmtMoney(g2.devido) + '</p>' +
     '<p class="detail">' + g2.dias + ' dia(s) não pago(s) desde 22/09 &middot; R$14,29/dia</p></div>' +
     '<div class="panel card"><p class="who">Coltão deve</p><p class="amount">' + fmtMoney(col.devido) + '</p>' +
     '<p class="detail">' + col.dias + ' dia(s) não pago(s) desde 22/09 &middot; R$14,29/dia</p></div>' +
     '<div class="panel card"><p class="who">Gregin — dívida antiga</p><p class="amount">' + fmtMoney(dividaAntigaGregin) + '</p>' +
-    '<p class="detail">Congelada em R$1.200,00 em 22/09/2026 &middot; não cresce mais</p></div>' +
-    '<div class="panel card"><p class="who">Kamusari deve</p><p class="amount">' + fmtMoney(kamDevido) + '</p>' +
-    '<p class="detail">' + kamQtdAberto + ' período(s) de 15 dias em aberto &middot; R$100/período</p></div>';
+    '<p class="detail">Congelada em R$1.200,00 em 22/09/2026 &middot; não cresce mais</p></div>';
 
   document.getElementById("generatedAt").textContent =
     "Extrato gerado em " + fmtDateBR(today) + " · valores calculados automaticamente na data de abertura.";
